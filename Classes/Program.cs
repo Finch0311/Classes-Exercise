@@ -1,10 +1,26 @@
-﻿namespace Classes
+﻿using Microsoft.VisualBasic;
+
+namespace Classes
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+           
+
+            Car myCar = new Car();
+
+            myCar.Make = "Ford";
+            myCar.Model = "F150";
+            myCar.Year = 2013;
+
+            var carList = new List<Car>() { myCar};
+
+            foreach(var vehicle in carList)
+            {
+                Console.WriteLine($"{vehicle.Make} {vehicle.Model} {vehicle.Year}");
+            }
+
         }
     }
 }
